@@ -6,16 +6,17 @@
 name: Build Newifi 3
 
 on: 
-  release:
-    types: [published]
-  push:
-    branches: 
-      - master
-  schedule:
-    - cron: 0 20 * * *
+  # release:
+  #   types: [published]
+  # push:
+  #   branches: 
+  #     - master
+  # schedule:
+  #   - cron: 0 20 * * *
+   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout
